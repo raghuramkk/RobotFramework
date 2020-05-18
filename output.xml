@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.8 on win32)" generated="20200516 22:46:13.274" rpa="false">
+<suite id="s1" name="Authentication" source="E:\Workspace\Robot\APIAutomation\TestCases\Authentication.robot">
+<test id="s1-t1" name="TC1: Baisc Authentication Test">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>ToolsQA</arg>
+<arg>TestPassword</arg>
+</arguments>
+<assign>
+<var>${auth}</var>
+</assign>
+<msg timestamp="20200516 22:46:13.496" level="INFO">${auth} = ['ToolsQA', 'TestPassword']</msg>
+<status status="PASS" starttime="20200516 22:46:13.496" endtime="20200516 22:46:13.497"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>${baseurl}</arg>
+<arg>auth=${auth}</arg>
+</arguments>
+<msg timestamp="20200516 22:46:13.497" level="INFO">Creating Session using : alias=mysession, url=http://restapi.demoqa.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x00000223C7E0B630&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200516 22:46:13.497" endtime="20200516 22:46:13.497"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>/authentication/CheckForAuthentication/</arg>
+</arguments>
+<assign>
+<var>${responce}</var>
+</assign>
+<msg timestamp="20200516 22:46:13.803" level="INFO">GET Request : url=http://restapi.demoqa.com/authentication/CheckForAuthentication/ 
+ path_url=/authentication/CheckForAuthentication/ 
+ headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic VG9vbHNRQTpUZXN0UGFzc3dvcmQ='} 
+ body=None 
+ </msg>
+<msg timestamp="20200516 22:46:13.804" level="INFO">GET Response : url=http://restapi.demoqa.com/authentication/CheckForAuthentication/ 
+ status=200, reason=OK 
+ body={
+    "FaultId": "OPERATION_SUCCESS",
+    "Fault": "Operation completed successfully",
+    "Username:Password": "ToolsQA:TestPassword",
+    "Authentication Type": "Basic"
+} 
+ </msg>
+<msg timestamp="20200516 22:46:13.804" level="INFO">${responce} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200516 22:46:13.498" endtime="20200516 22:46:13.805"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${responce.content}</arg>
+</arguments>
+<assign>
+<var>${content}</var>
+</assign>
+<msg timestamp="20200516 22:46:13.806" level="INFO">To JSON using : content={
+    "FaultId": "OPERATION_SUCCESS",
+    "Fault": "Operation completed successfully",
+    "Username:Password": "ToolsQA:TestPassword",
+    "Authentication Type": "Basic"
+} </msg>
+<msg timestamp="20200516 22:46:13.806" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20200516 22:46:13.807" level="INFO">${content} = {'FaultId': 'OPERATION_SUCCESS', 'Fault': 'Operation completed successfully', 'Username:Password': 'ToolsQA:TestPassword', 'Authentication Type': 'Basic'}</msg>
+<status status="PASS" starttime="20200516 22:46:13.806" endtime="20200516 22:46:13.807"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${content}</arg>
+</arguments>
+<status status="PASS" starttime="20200516 22:46:13.807" endtime="20200516 22:46:13.807"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${content}</arg>
+<arg>$.Fault</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200516 22:46:13.830" level="INFO">${status} = ['Operation completed successfully']</msg>
+<status status="PASS" starttime="20200516 22:46:13.808" endtime="20200516 22:46:13.830"></status>
+</kw>
+<kw name="Should Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<arguments>
+<arg>${status[0]}</arg>
+<arg>success</arg>
+</arguments>
+<status status="PASS" starttime="20200516 22:46:13.831" endtime="20200516 22:46:13.831"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${responce.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20200516 22:46:13.832" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200516 22:46:13.831" endtime="20200516 22:46:13.832"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${responce.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200516 22:46:13.833" endtime="20200516 22:46:13.833"></status>
+</kw>
+<status status="PASS" starttime="20200516 22:46:13.496" endtime="20200516 22:46:13.834" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC2: APIKey Authentication test">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>${baseurl2}</arg>
+</arguments>
+<msg timestamp="20200516 22:46:13.836" level="INFO">Creating Session using : alias=mysession, url=https://maps.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200516 22:46:13.835" endtime="20200516 22:46:13.836"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>location=-33.8670522,151.1957362</arg>
+<arg>radius=500</arg>
+<arg>types=food</arg>
+<arg>name=harbour</arg>
+<arg>key=${apikey}</arg>
+</arguments>
+<assign>
+<var>${params}</var>
+</assign>
+<msg timestamp="20200516 22:46:13.837" level="INFO">${params} = {'location': '-33.8670522,151.1957362', 'radius': '500', 'types': 'food', 'name': 'harbour', 'key': 'AIzaSyDYAoCVaRc0A3iPma62OcSPM_ar_vHSCk0'}</msg>
+<status status="PASS" starttime="20200516 22:46:13.836" endtime="20200516 22:46:13.837"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>${uri2}</arg>
+<arg>params=${params}</arg>
+</arguments>
+<assign>
+<var>${reponse}</var>
+</assign>
+<msg timestamp="20200516 22:46:14.213" level="INFO">GET Request : url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyDYAoCVaRc0A3iPma62OcSPM_ar_vHSCk0 
+ path_url=/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyDYAoCVaRc0A3iPma62OcSPM_ar_vHSCk0 
+ headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20200516 22:46:14.214" level="INFO">GET Response : url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyDYAoCVaRc0A3iPma62OcSPM_ar_vHSCk0 
+ status=200, reason=OK 
+ body={
+   "error_message" : "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+ 
+ </msg>
+<msg timestamp="20200516 22:46:14.214" level="INFO">e:\workspace\robot\venv\lib\site-packages\urllib3\connectionpool.py:986: InsecureRequestWarning: Unverified HTTPS request is being made to host 'maps.googleapis.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,</msg>
+<msg timestamp="20200516 22:46:14.216" level="INFO">${reponse} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200516 22:46:13.838" endtime="20200516 22:46:14.216"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${reponse.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200516 22:46:14.217" endtime="20200516 22:46:14.218"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${reponse.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200516 22:46:14.219" endtime="20200516 22:46:14.221"></status>
+</kw>
+<status status="PASS" starttime="20200516 22:46:13.835" endtime="20200516 22:46:14.222" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200516 22:46:13.276" endtime="20200516 22:46:14.227"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Authentication">Authentication</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

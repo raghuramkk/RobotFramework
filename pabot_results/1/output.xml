@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.8 on win32)" generated="20200507 18:18:52.191" rpa="false">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="POM2" source="E:\Workspace\Robot\WebAutomation\TestCases\POM2.robot">
+<test id="s1-s1-t1" name="Test Registration with POM &amp; DataDriver with raghu &amp; raghu">
+<kw name="Register Test">
+<arguments>
+<arg>Raghu</arg>
+<arg>Ram</arg>
+<arg>1234567890</arg>
+<arg>ragu@abc.com</arg>
+<arg>CANADA </arg>
+<arg>raghu</arg>
+<arg>raghu</arg>
+</arguments>
+<kw name="Open My Browser" library="LoginKeywords">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:52.394" level="INFO">Opening browser 'chrome' to base url 'http://newtours.demoaut.com/'.</msg>
+<status status="PASS" starttime="20200507 18:18:52.394" endtime="20200507 18:18:56.676"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200507 18:18:56.676" endtime="20200507 18:18:58.809"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:52.393" endtime="20200507 18:18:58.810"></status>
+</kw>
+<kw name="Navigate To Registration" library="RegistrationKeywords">
+<kw name="Check_And_Click_Link" library="Resources">
+<arguments>
+<arg>${lnk_Reg}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:58.813" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:58.812" endtime="20200507 18:18:58.813"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:58.814" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:58.814" endtime="20200507 18:18:58.814"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${olinkelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:58.815" level="INFO">${bValidation1} = ['element should be visible', 'link:REGISTER']</msg>
+<status status="PASS" starttime="20200507 18:18:58.814" endtime="20200507 18:18:58.815"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${olinkelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:58.815" level="INFO">${bValidation2} = ['element should be enabled', 'link:REGISTER']</msg>
+<status status="PASS" starttime="20200507 18:18:58.815" endtime="20200507 18:18:58.815"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:58.816" endtime="20200507 18:18:58.816"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${olinkelement}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:58.817" level="INFO">Clicking element 'link:REGISTER'.</msg>
+<status status="PASS" starttime="20200507 18:18:58.816" endtime="20200507 18:18:59.388"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:58.811" endtime="20200507 18:18:59.389"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:58.810" endtime="20200507 18:18:59.389"></status>
+</kw>
+<kw name="Validate Registration Page" library="RegistrationKeywords">
+<kw name="Validate_Page_Title" library="Resources">
+<arguments>
+<arg>Register: Mercury Tours</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${sPagetitle}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.394" level="INFO">Page title is 'Register: Mercury Tours'.</msg>
+<msg timestamp="20200507 18:18:59.394" level="INFO">${res} = None</msg>
+<status status="PASS" starttime="20200507 18:18:59.390" endtime="20200507 18:18:59.394"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.389" endtime="20200507 18:18:59.395"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.389" endtime="20200507 18:18:59.395"></status>
+</kw>
+<kw name="Enter FirstName" library="RegistrationKeywords">
+<arguments>
+<arg>${firstname}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_FirstName}</arg>
+<arg>${sFirstname}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.396" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.396" endtime="20200507 18:18:59.396"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.396" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.396" endtime="20200507 18:18:59.396"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.397" level="INFO">${bValidation1} = ['element should be visible', 'name:firstName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.396" endtime="20200507 18:18:59.397"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.397" level="INFO">${bValidation2} = ['element should be enabled', 'name:firstName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.397" endtime="20200507 18:18:59.397"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.397" endtime="20200507 18:18:59.397"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.398" level="INFO">Typing text 'Raghu' into text field 'name:firstName'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.397" endtime="20200507 18:18:59.519"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.395" endtime="20200507 18:18:59.519"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.395" endtime="20200507 18:18:59.519"></status>
+</kw>
+<kw name="Enter LastName" library="RegistrationKeywords">
+<arguments>
+<arg>${lastname}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_LastName}</arg>
+<arg>${sFirstname}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.521" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.521" endtime="20200507 18:18:59.521"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.522" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.521" endtime="20200507 18:18:59.522"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.522" level="INFO">${bValidation1} = ['element should be visible', 'name:lastName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.522" endtime="20200507 18:18:59.522"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.523" level="INFO">${bValidation2} = ['element should be enabled', 'name:lastName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.523" endtime="20200507 18:18:59.523"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.523" endtime="20200507 18:18:59.523"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.524" level="INFO">Typing text 'Ram' into text field 'name:lastName'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.524" endtime="20200507 18:18:59.608"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.520" endtime="20200507 18:18:59.608"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.519" endtime="20200507 18:18:59.608"></status>
+</kw>
+<kw name="Enter Phone" library="RegistrationKeywords">
+<arguments>
+<arg>${phone}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Phone}</arg>
+<arg>${sPhone}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.610" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.610" endtime="20200507 18:18:59.610"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.610" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.610" endtime="20200507 18:18:59.611"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.611" level="INFO">${bValidation1} = ['element should be visible', 'name:phone']</msg>
+<status status="PASS" starttime="20200507 18:18:59.611" endtime="20200507 18:18:59.611"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.611" level="INFO">${bValidation2} = ['element should be enabled', 'name:phone']</msg>
+<status status="PASS" starttime="20200507 18:18:59.611" endtime="20200507 18:18:59.611"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.611" endtime="20200507 18:18:59.612"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.612" level="INFO">Typing text '1234567890' into text field 'name:phone'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.612" endtime="20200507 18:18:59.721"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.609" endtime="20200507 18:18:59.721"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.608" endtime="20200507 18:18:59.721"></status>
+</kw>
+<kw name="Enter Email" library="RegistrationKeywords">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Email}</arg>
+<arg>${Email}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.722" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.722" endtime="20200507 18:18:59.722"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.723" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.723" endtime="20200507 18:18:59.723"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.723" level="INFO">${bValidation1} = ['element should be visible', 'name:userName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.723" endtime="20200507 18:18:59.723"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.724" level="INFO">${bValidation2} = ['element should be enabled', 'name:userName']</msg>
+<status status="PASS" starttime="20200507 18:18:59.724" endtime="20200507 18:18:59.724"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.724" endtime="20200507 18:18:59.725"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.725" level="INFO">Typing text 'ragu@abc.com' into text field 'name:userName'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.725" endtime="20200507 18:18:59.830"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.722" endtime="20200507 18:18:59.830"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.721" endtime="20200507 18:18:59.830"></status>
+</kw>
+<kw name="Enter Address1" library="RegistrationKeywords">
+<arguments>
+<arg>${Add1}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Add1}</arg>
+<arg>${Add1}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.832" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.832" endtime="20200507 18:18:59.832"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.833" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.832" endtime="20200507 18:18:59.833"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.833" level="INFO">${bValidation1} = ['element should be visible', 'name:address1']</msg>
+<status status="PASS" starttime="20200507 18:18:59.833" endtime="20200507 18:18:59.833"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.833" level="INFO">${bValidation2} = ['element should be enabled', 'name:address1']</msg>
+<status status="PASS" starttime="20200507 18:18:59.833" endtime="20200507 18:18:59.833"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.834" endtime="20200507 18:18:59.834"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.835" level="INFO">Typing text '' into text field 'name:address1'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.834" endtime="20200507 18:18:59.902"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.831" endtime="20200507 18:18:59.902"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.830" endtime="20200507 18:18:59.902"></status>
+</kw>
+<kw name="Enter Address2" library="RegistrationKeywords">
+<arguments>
+<arg>${Add2}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Add2}</arg>
+<arg>${Add2}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.903" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.903" endtime="20200507 18:18:59.903"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.903" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.903" endtime="20200507 18:18:59.903"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.904" level="INFO">${bValidation1} = ['element should be visible', 'name:address2']</msg>
+<status status="PASS" starttime="20200507 18:18:59.903" endtime="20200507 18:18:59.904"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.904" level="INFO">${bValidation2} = ['element should be enabled', 'name:address2']</msg>
+<status status="PASS" starttime="20200507 18:18:59.904" endtime="20200507 18:18:59.904"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.904" endtime="20200507 18:18:59.904"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.904" level="INFO">Typing text '' into text field 'name:address2'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.904" endtime="20200507 18:18:59.967"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.902" endtime="20200507 18:18:59.968"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.902" endtime="20200507 18:18:59.968"></status>
+</kw>
+<kw name="Enter City" library="RegistrationKeywords">
+<arguments>
+<arg>${City}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_City}</arg>
+<arg>${City}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.969" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.968" endtime="20200507 18:18:59.969"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.969" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:18:59.969" endtime="20200507 18:18:59.969"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.969" level="INFO">${bValidation1} = ['element should be visible', 'name:city']</msg>
+<status status="PASS" starttime="20200507 18:18:59.969" endtime="20200507 18:18:59.969"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:18:59.970" level="INFO">${bValidation2} = ['element should be enabled', 'name:city']</msg>
+<status status="PASS" starttime="20200507 18:18:59.970" endtime="20200507 18:18:59.970"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:18:59.970" endtime="20200507 18:18:59.970"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:18:59.970" level="INFO">Typing text '' into text field 'name:city'.</msg>
+<status status="PASS" starttime="20200507 18:18:59.970" endtime="20200507 18:19:00.047"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.968" endtime="20200507 18:19:00.047"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:59.968" endtime="20200507 18:19:00.047"></status>
+</kw>
+<kw name="Enter State" library="RegistrationKeywords">
+<arguments>
+<arg>${State}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_State}</arg>
+<arg>${State}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.049" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.049" endtime="20200507 18:19:00.049"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.050" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.050" endtime="20200507 18:19:00.050"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.051" level="INFO">${bValidation1} = ['element should be visible', 'name:state']</msg>
+<status status="PASS" starttime="20200507 18:19:00.050" endtime="20200507 18:19:00.051"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.051" level="INFO">${bValidation2} = ['element should be enabled', 'name:state']</msg>
+<status status="PASS" starttime="20200507 18:19:00.051" endtime="20200507 18:19:00.051"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.052" endtime="20200507 18:19:00.052"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.052" level="INFO">Typing text '' into text field 'name:state'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.052" endtime="20200507 18:19:00.125"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.048" endtime="20200507 18:19:00.125"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.047" endtime="20200507 18:19:00.125"></status>
+</kw>
+<kw name="Enter Zipcode" library="RegistrationKeywords">
+<arguments>
+<arg>${Zipcode}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Zipcode}</arg>
+<arg>${Zipcode}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.127" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.127" endtime="20200507 18:19:00.127"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.128" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.128" endtime="20200507 18:19:00.128"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.128" level="INFO">${bValidation1} = ['element should be visible', 'name:postalCode']</msg>
+<status status="PASS" starttime="20200507 18:19:00.128" endtime="20200507 18:19:00.128"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.129" level="INFO">${bValidation2} = ['element should be enabled', 'name:postalCode']</msg>
+<status status="PASS" starttime="20200507 18:19:00.129" endtime="20200507 18:19:00.129"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.129" endtime="20200507 18:19:00.130"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.130" level="INFO">Typing text '' into text field 'name:postalCode'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.130" endtime="20200507 18:19:00.194"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.126" endtime="20200507 18:19:00.194"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.125" endtime="20200507 18:19:00.194"></status>
+</kw>
+<kw name="Select Country" library="RegistrationKeywords">
+<arguments>
+<arg>${Country}</arg>
+</arguments>
+<kw name="Validate_And_Select_Dropdown_By_Label" library="Resources">
+<arguments>
+<arg>${dpdn_Reg_Cntry}</arg>
+<arg>${State}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.196" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.196" endtime="20200507 18:19:00.196"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.197" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.196" endtime="20200507 18:19:00.197"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oDDElement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.198" level="INFO">${bValidation1} = ['element should be visible', 'name:country']</msg>
+<status status="PASS" starttime="20200507 18:19:00.197" endtime="20200507 18:19:00.198"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oDDElement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.198" level="INFO">${bValidation2} = ['element should be enabled', 'name:country']</msg>
+<status status="PASS" starttime="20200507 18:19:00.198" endtime="20200507 18:19:00.198"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element attribute value should be</arg>
+<arg>${oDDElement}</arg>
+<arg>value</arg>
+<arg>${ValuetoSelect}</arg>
+</arguments>
+<assign>
+<var>${bValidation3}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.199" level="INFO">${bValidation3} = ['element attribute value should be', 'name:country', 'value', 'CANADA ']</msg>
+<status status="PASS" starttime="20200507 18:19:00.198" endtime="20200507 18:19:00.199"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2} and ${bValidation3}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.199" endtime="20200507 18:19:00.199"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${oDDElement}</arg>
+<arg>${ValuetoSelect}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.199" level="INFO">Selecting options from selection list 'name:country' by label CANADA .</msg>
+<status status="PASS" starttime="20200507 18:19:00.199" endtime="20200507 18:19:00.287"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.195" endtime="20200507 18:19:00.287"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.194" endtime="20200507 18:19:00.287"></status>
+</kw>
+<kw name="Enter Reg Username" library="RegistrationKeywords">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Username}</arg>
+<arg>${username}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.288" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.288" endtime="20200507 18:19:00.288"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.288" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.288" endtime="20200507 18:19:00.288"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.289" level="INFO">${bValidation1} = ['element should be visible', 'name:email']</msg>
+<status status="PASS" starttime="20200507 18:19:00.289" endtime="20200507 18:19:00.289"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.289" level="INFO">${bValidation2} = ['element should be enabled', 'name:email']</msg>
+<status status="PASS" starttime="20200507 18:19:00.289" endtime="20200507 18:19:00.289"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.289" endtime="20200507 18:19:00.290"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.290" level="INFO">Typing text 'raghu' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.290" endtime="20200507 18:19:00.370"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.288" endtime="20200507 18:19:00.370"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.287" endtime="20200507 18:19:00.370"></status>
+</kw>
+<kw name="Enter Reg Password" library="RegistrationKeywords">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_Pwd}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.372" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.372" endtime="20200507 18:19:00.372"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.373" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.372" endtime="20200507 18:19:00.373"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.373" level="INFO">${bValidation1} = ['element should be visible', 'name:password']</msg>
+<status status="PASS" starttime="20200507 18:19:00.373" endtime="20200507 18:19:00.373"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.374" level="INFO">${bValidation2} = ['element should be enabled', 'name:password']</msg>
+<status status="PASS" starttime="20200507 18:19:00.373" endtime="20200507 18:19:00.374"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.374" endtime="20200507 18:19:00.374"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.374" level="INFO">Typing text 'raghu' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.374" endtime="20200507 18:19:00.459"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.371" endtime="20200507 18:19:00.459"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.370" endtime="20200507 18:19:00.459"></status>
+</kw>
+<kw name="Enter ConfirmPwd" library="RegistrationKeywords">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Validate_And_Set_Text" library="Resources">
+<arguments>
+<arg>${txt_Reg_ConfPwd}</arg>
+<arg>${cnfpassword}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.460" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.460" endtime="20200507 18:19:00.460"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.461" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.460" endtime="20200507 18:19:00.461"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.461" level="INFO">${bValidation1} = ['element should be visible', 'name:confirmPassword']</msg>
+<status status="PASS" starttime="20200507 18:19:00.461" endtime="20200507 18:19:00.461"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oTextelement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.461" level="INFO">${bValidation2} = ['element should be enabled', 'name:confirmPassword']</msg>
+<status status="PASS" starttime="20200507 18:19:00.461" endtime="20200507 18:19:00.461"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.461" endtime="20200507 18:19:00.462"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${oTextelement}</arg>
+<arg>${sTexttoSet}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.462" level="INFO">Typing text 'raghu' into text field 'name:confirmPassword'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.462" endtime="20200507 18:19:00.534"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.459" endtime="20200507 18:19:00.534"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.459" endtime="20200507 18:19:00.534"></status>
+</kw>
+<kw name="Submit Registration" library="RegistrationKeywords">
+<kw name="Check_And_Click_Button" library="Resources">
+<arguments>
+<arg>${btn_Reg_Submit}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.536" level="INFO">${bValidation1} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.535" endtime="20200507 18:19:00.536"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.536" level="INFO">${bValidation2} = </msg>
+<status status="PASS" starttime="20200507 18:19:00.536" endtime="20200507 18:19:00.536"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${oBtnElement}</arg>
+</arguments>
+<assign>
+<var>${bValidation1}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.536" level="INFO">${bValidation1} = ['element should be visible', 'name:register']</msg>
+<status status="PASS" starttime="20200507 18:19:00.536" endtime="20200507 18:19:00.536"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>element should be enabled</arg>
+<arg>${oBtnElement}</arg>
+</arguments>
+<assign>
+<var>${bValidation2}</var>
+</assign>
+<msg timestamp="20200507 18:19:00.536" level="INFO">${bValidation2} = ['element should be enabled', 'name:register']</msg>
+<status status="PASS" starttime="20200507 18:19:00.536" endtime="20200507 18:19:00.537"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${bValidation1} and ${bValidation2}</arg>
+</arguments>
+<status status="PASS" starttime="20200507 18:19:00.537" endtime="20200507 18:19:00.537"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${oBtnElement}</arg>
+</arguments>
+<msg timestamp="20200507 18:19:00.537" level="INFO">Clicking element 'name:register'.</msg>
+<status status="PASS" starttime="20200507 18:19:00.537" endtime="20200507 18:19:01.563"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.535" endtime="20200507 18:19:01.563"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:00.534" endtime="20200507 18:19:01.563"></status>
+</kw>
+<kw name="Close my Browser" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200507 18:19:01.564" endtime="20200507 18:19:03.634"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:19:01.564" endtime="20200507 18:19:03.635"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:52.393" endtime="20200507 18:19:03.635"></status>
+</kw>
+<status status="PASS" starttime="20200507 18:18:52.392" endtime="20200507 18:19:03.636" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200507 18:18:52.213" endtime="20200507 18:19:03.638"></status>
+</suite>
+<status status="PASS" starttime="20200507 18:18:52.193" endtime="20200507 18:19:03.645"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="POM2">Suites.POM2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

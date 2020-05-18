@@ -1,0 +1,6 @@
+datasources:d163a276fd637d2c1271d324171eccfb19b8ce9a
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:92cd5376802a1c643649bf20ea426777fe88ccf9
+--suite Suites.POM
+--suite Suites.POM2

@@ -1,0 +1,19 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.POM                                                                    
+==============================================================================
+Test Login POM & DataDriver with tutorial & tutorial                  | PASS |
+------------------------------------------------------------------------------
+Test Login POM & DataDriver with raghu & sridevi                      | FAIL |
+Title should have been 'Find a Flight: Mercury Tours:' but was 'Sign-on: Mercury Tours'.
+------------------------------------------------------------------------------
+Suites.POM                                                            | FAIL |
+2 critical tests, 1 passed, 1 failed
+2 tests total, 1 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+2 critical tests, 1 passed, 1 failed
+2 tests total, 1 passed, 1 failed
+==============================================================================
+Output:  E:\Workspace\Robot\pabot_results\0\output.xml
